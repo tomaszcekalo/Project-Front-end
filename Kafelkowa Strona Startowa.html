@@ -6,25 +6,79 @@
     <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.5.0/lodash.min.js"></script>
 	<link rel="stylesheet" href="gridstack.css" />
 	<script type="text/javascript" src='gridstack.js'></script>
-	<style>
-		.grid-stack-item-content{
-			background-color: #eef;
-		}
-	</style>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.cookie/1.4.1/jquery.cookie.min.js"></script>
+	<link rel="stylesheet" href="Metro-UI-CSS-metrouicss-2x/min/metro-bootstrap.min.css" />
+	<script type="text/javascript" src="main.js" ></script><!---->
+	<link rel="stylesheet" href="main.css" />
+	<script type="text/javascript" src="Metro-UI-CSS-metrouicss-2x/docs/js/jquery/jquery.widget.min.js" ></script>
+	
+	<script type="text/javascript" src="Metro-UI-CSS-metrouicss-2x/min/metro.min.js" ></script>
+	<link href="Metro-UI-CSS-metrouicss-2x/min/iconFont.min.css" rel="stylesheet">
 </head>
-<body>
+<body class="metro" style="background-color: #00356a !important;">
 <div class="grid-stack" style="height:100%" >
     <div class="grid-stack-item " data-gs-x="0" data-gs-y="0"
-        data-gs-width="4" data-gs-height="2">
-            <div class="grid-stack-item-content">
-				Hello
+        data-gs-width="3" data-gs-height="2">
+            <div class="grid-stack-item-content tile ">
+				<div class="tile-status">
+					<div class="badge bg-red">1</div>
+					<span class="name fg-black">Hello</span>
+				</div>
 			</div>
     </div>
-    <div class="grid-stack-item" data-gs-x="4" data-gs-y="0" data-gs-width="4" data-gs-height="4">
-            <div class="grid-stack-item-content">
-				World
+    <div class="grid-stack-item" data-gs-x="3" data-gs-y="0" data-gs-width="2" data-gs-height="3">
+            <div class="grid-stack-item-content tile">
+				<div class="tile-status">
+					<div class="badge bg-red">2</div>
+					<span class="name fg-black">World</span>
+				</div>
 			</div>
     </div>
+	<div class="grid-stack-item" data-gs-x="0" data-gs-y="3" data-gs-width="1" data-gs-height="1">
+		<div class="grid-stack-item-content tile bg-darkPink">
+			<div class="tile-content icon">
+				<i class="icon-cart-2"></i>
+			</div>
+			<div class="tile-status">
+				<span class="name">Store</span>
+			</div>
+		</div>
+	</div>
+	<div class="grid-stack-item" data-gs-x="1" data-gs-y="3" data-gs-width="1" data-gs-height="2">
+		<div class="grid-stack-item-content tile bg-amber">
+			<div class="tile-content icon">
+				<i class="icon-play-alt"></i>
+			</div>
+			<div class="brand bg-black">
+				<span class="label fg-white">Player</span>
+				<div class="badge bg-darkRed paused"></div>
+			</div>
+		</div>
+	</div>
+	<div class="grid-stack-item" data-gs-x="2" data-gs-y="3" data-gs-width="1" data-gs-height="2">
+		<div class="grid-stack-item-content tile">
+			<div class="tile-content image">
+				<img src="https://lh6.googleusercontent.com/-VbdQv0sAwdA/AAAAAAAAAAI/AAAAAAAAA3g/0sPl2iojHqM/photo.jpg">
+			</div>
+			<div class="brand bg-black opacity">
+				<span class="label fg-white">Images</span>
+				<span class="badge bg-orange">12</span>
+			</div>
+		</div>
+	</div>
+	<div class="grid-stack-item" data-gs-x="5" data-gs-y="0" data-gs-width="1" data-gs-height="2">
+		<div class="grid-stack-item-content tile live" data-role="live-tile" data-effect="slideLeft">
+			<div class="tile-content image">
+				<img src="https://lh6.googleusercontent.com/-VbdQv0sAwdA/AAAAAAAAAAI/AAAAAAAAA3g/0sPl2iojHqM/photo.jpg">
+			</div>
+			<div class="tile-content image">
+				<img src="https://scontent.xx.fbcdn.net/v/t1.0-9/1919001_105461466134164_5288822_n.jpg?oh=8ad45f15d5186d21fc1c7279b90e16db&oe=59542097">
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+</div>
 </div>
 
 <script type="text/javascript">

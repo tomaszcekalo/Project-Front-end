@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="product" content="Metro UI CSS Framework">
+    <meta name="keywords" content="Metro, UI, CSS, Framework, jquery">
+    <meta name="description" content="Simple responsive css framework">
+    <meta name="author" content="Sergey S. Pimenov, Ukraine, Kiev">
+
+    <link href="css/metro-bootstrap.css" rel="stylesheet">
+    <link href="css/metro-bootstrap-responsive.css" rel="stylesheet">
+    <link href="css/iconFont.css" rel="stylesheet">
+    <link href="css/docs.css" rel="stylesheet">
+    <link href="js/prettify/prettify.css" rel="stylesheet">
+
+    <!-- Load JavaScript Libraries -->
+    <script src="js/jquery/jquery.min.js"></script>
+    <script src="js/jquery/jquery.widget.min.js"></script>
+    <script src="js/jquery/jquery.mousewheel.js"></script>
+    <script src="js/prettify/prettify.js"></script>
+
+    <!-- Metro UI CSS JavaScript plugins -->
+    <script src="js/load-metro.js"></script>
+
+    <!-- Local JavaScript -->
+    <script src="js/docs.js"></script>
+    <script src="js/github.info.js"></script>
+    <script src="js/ga.js"></script>
+
+    <title>Metro UI CSS : Simple responsive css framework</title>
+</head>
+<body class="metro">
+    <header class="bg-dark" data-load="header.html"></header>
+    <div class="container">
+        <h1>
+            <a href="/"><i class="icon-arrow-left-3 fg-darker smaller"></i></a>
+            Wizard<small class="on-right">component</small>
+        </h1>
+<div>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Metro UI - Responsive 1 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-1632668592742327"
+     data-ad-slot="8347181909"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+	    </div>
+        <div class="example">
+            <h4>Default initialize </h4>
+            <div class="wizard" id="wizard">
+                <div class="steps">
+                    <div class="step">Page 1</div>
+                    <div class="step">Page 2</div>
+                    <div class="step">Page 3</div>
+                </div>
+            </div>
+
+            <script>
+                $(function(){
+                    $('#wizard').wizard({
+                        locale: 'en',
+                        stepperClickable: false,
+                        onCancel: function(){
+                            $.Dialog({
+                                title: 'Wizard',
+                                content: 'Cancel button clicked',
+                                shadow: true,
+                                padding: 10
+                            });
+                        },
+                        onHelp: function(){
+                            $.Dialog({
+                                title: 'Wizard',
+                                content: 'Help button clicked',
+                                shadow: true,
+                                padding: 10
+                            });
+                        },
+                        onFinish: function(){
+                            $.Dialog({
+                                title: 'Wizard',
+                                content: 'Finish button clicked',
+                                shadow: true,
+                                padding: 10
+                            });
+                        }
+                    });
+                });
+            </script>
+        </div>
+
+        <div class="example">
+            <h4>This wizard started from page number 3</h4>
+            <div class="wizard" id="wizard2">
+                <div class="steps">
+                    <div class="step">Page 1</div>
+                    <div class="step">Page 2</div>
+                    <div class="step">Page 3</div>
+                    <div class="step">Page 4</div>
+                    <div class="step">Page 5</div>
+                </div>
+            </div>
+
+            <script>
+                $(function(){
+                    $('#wizard2').wizard({
+                        locale: 'en',
+                        startPage: 3,
+                        stepperClickable: false
+                    });
+                });
+            </script>
+        </div>
+
+        <div class="example">
+            <h4>Switch page over click on stepper steps</h4>
+            <div class="wizard" id="wizard3">
+                <div class="steps">
+                    <div class="step">Page 1</div>
+                    <div class="step">Page 2</div>
+                    <div class="step">Page 3</div>
+                    <div class="step">Page 4</div>
+                    <div class="step">Page 5</div>
+                    <div class="step">Page 6</div>
+                    <div class="step">Page 7</div>
+                </div>
+            </div>
+
+            <script>
+                $(function(){
+                    $('#wizard3').wizard({
+                        locale: 'en',
+                        stepperClickable: true,
+                        onStepClick: function(step){
+                            // stepper steps click handler
+                        }
+                    });
+                });
+            </script>
+        </div>
+
+        <div class="example">
+            <h4>Customize buttons</h4>
+            <div class="wizard" id="wizard4">
+                <div class="steps">
+                    <div class="step">Page 1</div>
+                    <div class="step">Page 2</div>
+                    <div class="step">Page 3</div>
+                </div>
+            </div>
+
+            <script>
+                $(function(){
+                    $('#wizard4').wizard({
+                        locale: 'en',
+                        stepperClickable: false,
+                        buttons: {
+                            cancel: {
+                                show: true,
+                                title: "Cancel wizard",
+                                cls: "warning",
+                                group: "right"
+                            },
+                            help: {
+                                show: true,
+                                title: "Help Me!",
+                                cls: "button primary",
+                                group: "right"
+                            },
+                            prior: {
+                                show: true,
+                                title: "Previous page",
+                                group: "left",
+                                cls: "info"
+                            },
+                            next: {
+                                show: true,
+                                title: "Next page",
+                                group: "left",
+                                cls: "info"
+                            },
+                            finish: {
+                                show: true,
+                                title: "Finish step and Go!",
+                                group: "left",
+                                cls: "danger"
+                            }
+                        }
+                    });
+                });
+            </script>
+        </div>
+
+        <h3>Html definition</h3>
+
+<pre class="prettyprint linenums">
+&lt;div class="wizard" id="wizard"&gt;
+    &lt;div class="steps"&gt;
+        &lt;div class="step"&gt;Page 1&lt;/div&gt;
+        &lt;div class="step"&gt;Page 2&lt;/div&gt;
+        &lt;div class="step"&gt;Page 3&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+
+        <h3>JavaScript</h3>
+<pre class="prettyprint linenums">
+$(function(){
+    $('#wizard').wizard({
+            stepper: true, // show stepper, see http://metroui.org.ua/stepper.html
+            stepperType: 'default', // stepper type, see http://metroui.org.ua/stepper.html
+            stepperClickable: false, // set to true if you can switch page over click on stepper
+            startPage: 'default', // if this value ne 'default' wizard started from this page
+            locale: $.Metro.currentLocale, //'en', 'ua', 'ru', ... more languages defined in metro-locale.js
+            finishStep: 'default', // 'default' - last page or int - number of page
+            buttons: { //show or hide buttons
+                cancel: true,
+                help: true,
+                prior: true,
+                next: true,
+                finish: true
+            },
+
+            // Buttons click methods, page change events
+            onCancel: function(page, wiz){...},
+            onHelp: function(page, wiz){...},
+            onPrior: function(page, wiz){...},
+            onNext: function(page, wiz){...},
+            onFinish: function(page, wiz){...},
+            onPage: function(page, wiz){...},
+            onStepClick: function(step){...}
+    });
+});
+</pre>
+
+        <h3>Customize buttons</h3>
+<pre class="prettyprint linenums">
+$(function(){
+    $('#wizard').wizard({
+        buttons: {
+            cancel: {
+                show: true,
+                title: "Cancel wizard",
+                cls: "warning",
+                group: "right"
+            },
+            help: {
+                show: true,
+                title: "Help Me!",
+                cls: "button primary",
+                group: "right"
+            },
+            prior: {
+                show: true,
+                title: "Previous page",
+                group: "left",
+                cls: "info"
+            },
+            next: {
+                show: true,
+                title: "Next page",
+                group: "left",
+                cls: "info"
+            },
+            finish: {
+                show: true,
+                title: "Finish step and Go!",
+                group: "left",
+                cls: "danger"
+            }
+        }
+    });
+});
+</pre>
+
+
+
+
+    </div>
+
+    <script src="js/hitua.js"></script>
+
+</body>
+</html>

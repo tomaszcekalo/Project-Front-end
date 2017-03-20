@@ -1,0 +1,10 @@
+.metro .tile .brand .badge, 
+.metro .tile .tile-status .badge {
+	right: 20px;//zamiast 10px
+}
+.metro .tile{
+	height: auto;
+}
+.tile-badge{
+	height: 28px;
+}
